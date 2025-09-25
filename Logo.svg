@@ -1,0 +1,13 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="90" viewBox="0 0 320 90">
+  <!-- Icon: abstract path made of connected nodes -->
+  <circle cx="25" cy="45" r="7" fill="#0F3327"/>
+  <circle cx="55" cy="25" r="7" fill="#0F3327"/>
+  <circle cx="85" cy="45" r="7" fill="#0F3327"/>
+  <path d="M25 45 Q40 10, 55 25 Q70 60, 85 45" stroke="#0F3327" stroke-width="4" fill="none" stroke-linecap="round"/>
+  
+  <!-- Text: SkillPath -->
+  <text x="110" y="55" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="bold" fill="#0F3327">
+    SkillPath
+  </text>
+</svg>

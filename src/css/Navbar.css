@@ -1,0 +1,99 @@
+.navbar {
+  position: fixed;   
+  padding: 0 40px;  
+  top: 0; left: 0; right: 0;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;   
+  background: #fffaf0;        
+  align-items: center; 
+}
+
+
+.navbar a {
+  color: #36454f;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  white-space: nowrap; 
+}
+
+
+.nav-right {   
+  background: #fffaf0;      
+  color: #36454f;
+  padding: 10px 16px;
+  font-weight: 550;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  white-space: nowrap; 
+}
+
+.nav-left{
+  margin-left: 30px;
+  background: #fffaf0;
+  display: flex;
+  gap: 90px;
+  white-space: nowrap; 
+  font-weight: 550;
+}
+
+.log-in{
+  align-items: center;
+  appearance: none;
+  background-color: #cfdcff;
+  border-radius: 33px;
+  cursor: pointer;
+  display: inline-flex;
+  height: 33px;
+  letter-spacing: .25px;
+  padding: 2px 24px;
+  text-align: center;
+  user-select: none;
+  width: auto;
+  font-size: 14px;
+}
+
+.sign-up{
+  align-items: center;
+  appearance: none;
+  background-color: #fffaf0;
+  border-radius: 33px;
+  cursor: pointer;
+  display: inline-flex;
+  height: 33px;
+  letter-spacing: .25px;
+  padding: 2px 24px;
+  text-align: center;
+  user-select: none;
+  width: auto;
+  font-size: 14px;
+  border: 2px solid #cfdcff; 
+}
+
+.log-in:hover {
+  background: #dadaff;
+  transform: translateY(-2px);
+  transition: all 0.25s ease;
+}
+
+
+.sign-up:hover {
+  background-color: #f0f8ff; 
+  transform: translateY(-2px);
+  transition: all 0.25s ease;
+}
+
+.nav-left a:hover {
+  color: #a4a4cc; /* example hover color */
+  transform: translateY(-2px);
+  transition: all 0.25s ease;
+}
+
+.navbar-logo {
+  background: url("Logo.svg") no-repeat center;
+  width: 200px;
+  height: 70px;
+  background-size: contain;
+}
+
