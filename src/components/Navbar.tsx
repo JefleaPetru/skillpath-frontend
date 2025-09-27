@@ -1,6 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import "../css/Navbar.css"
 
 export default function Navbar(){
+
+    const navigate = useNavigate();
+
     return (
         <nav className="navbar">
             <div className="navbar-logo"></div>
@@ -12,7 +16,7 @@ export default function Navbar(){
             </div>
 
             <div className="nav-right">
-                <a href="#" className="log-in">Log In</a>
+                <a href="#" className="log-in" onClick={() => navigate("/Login")}>Log In</a>
                 <a href="#" className="sign-up">Sign Up</a>
             </div>
         </nav>

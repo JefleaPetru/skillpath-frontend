@@ -9,15 +9,13 @@
   align-items: center; 
 }
 
-
 .navbar a {
   color: #36454f;
   text-decoration: none;
   font-family: Arial, sans-serif;
   white-space: nowrap; 
+  user-select: none;
 }
-
-
 .nav-right {   
   background: #fffaf0;      
   color: #36454f;
@@ -77,7 +75,6 @@
   transition: all 0.25s ease;
 }
 
-
 .sign-up:hover {
   background-color: #f0f8ff; 
   transform: translateY(-2px);
@@ -85,7 +82,7 @@
 }
 
 .nav-left a:hover {
-  color: #a4a4cc; /* example hover color */
+  color: #a4a4cc;
   transform: translateY(-2px);
   transition: all 0.25s ease;
 }

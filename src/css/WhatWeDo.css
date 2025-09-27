@@ -4,17 +4,21 @@
 }
 
 .left-column {
-  flex: 0 0 40%; /* fixed at 60% */
+  width: 550px;  
   padding: 10px;
-  background-color: aqua;
-  height: 500px;
-  width: 500px;
+  height: 550px;
+  font-size: 42px;
+  line-height: 1.45;
+  text-align: left;
+  color: #36454f;                   
+  font-family: "Söhne", "Inter", "Helvetica Neue", Arial, sans-serif;
+  user-select: none;
+  font-weight: 550;
 }
 
 .right-column {
-  flex: 0 0 60%; /* fixed at 40% */
+  width: 700px;  
   padding: 10px;
   background-color: blue;
-  height: 500px;
-  width: 500px;
+  height: 550px;
 }
