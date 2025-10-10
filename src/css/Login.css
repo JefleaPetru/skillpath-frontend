@@ -7,16 +7,17 @@
 }
 
 .container-login {
-  height: 420px;
-  width: 450px;
+  height: 500px;
+  width: 400px;
   border: 4px solid #cfdcff;
   border-radius: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 10px;
-  gap: 40px;
+  gap: 20px;
 }
+
 
 .title {
   font-size: 32px;
@@ -26,20 +27,23 @@
   font-weight: 550;
   user-select: none;
   padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-.log-in-btn {        
-  width: 83%;
-  padding: 12px;
+.log-in-btn {
+  width: 76%;
+  height: 40px;
+  border: none;
   border-radius: 25px;
+  background-color: #cfdcff;
   color: #36454f;
   font-size: 16px;
-  font-weight: bold;
   cursor: pointer;
   user-select: none;
-  background-color: #cfdcff;
-  border: none;
+  text-align: center;       /* horizontal centering */
+  line-height: 40px;        /* match the height for vertical centering */
 }
+
 
 .create-account-btn{
   width: 83%;
@@ -52,11 +56,14 @@
   user-select: none;
   border: 2px solid #cfdcff;
   background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .log-in-btn:hover,
 .create-account-btn:hover {
-  background-color: #f0f8ff;
+  background-color: #dadaff;
 }
 
 .log-in-btn:disabled {
@@ -117,8 +124,5 @@
   background-size: contain;
   cursor: pointer;
   background: url("../exit.svg") no-repeat center;
-  background-size: contain; /* scales the svg */
+  background-size: contain; 
 }
-
-
-

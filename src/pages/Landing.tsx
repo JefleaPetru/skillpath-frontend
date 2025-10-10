@@ -8,7 +8,7 @@ function Landing() {
       <Navbar />
       <section className = "intro-message">
         <h1 className="hero-title">
-            Master new <span className="highlight-skillks">skills</span> with your AI customized learning paths.
+            Master new <span className="highlight-skillks">skills</span> with your <span className="highlight-ai">AI</span> customized learning paths.
         </h1>
 
          <p className="sub-hero">

@@ -1,3 +1,4 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="120.0" height="120.0">
-  <ns0:path d="M5 12h14M10 7l-5 5 5 5" fill="none" stroke="#cfdcff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+<?xml version="1.0" encoding="utf-8"?>
+<ns0:svg height="120.0" viewBox="0 0 24 24" width="120.0" xmlns:ns0="http://www.w3.org/2000/svg">
+<ns0:path d="M5 12h14M10 7l-5 5 5 5" fill="none" stroke="#36454f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
 </ns0:svg>

@@ -17,7 +17,7 @@ export default function Navbar(){
 
             <div className="nav-right">
                 <a href="#" className="log-in" onClick={() => navigate("/Login")}>Log In</a>
-                <a href="#" className="sign-up">Sign Up</a>
+                <a href="#" className="sign-up" onClick={()=> navigate("/Signup")}>Sign Up</a>
             </div>
         </nav>
     )
