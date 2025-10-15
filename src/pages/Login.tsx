@@ -4,13 +4,11 @@ import TextField from "@mui/material/TextField";
 import "../css/Login.css";
 
 
-
 declare global {
   interface Window {
     google?: any;
   }
 }
-
 
 
 function Login() {
@@ -20,9 +18,8 @@ function Login() {
   const navigate = useNavigate();
   const isDisabled = !email || !password;
 
-  function handleCredentialResponse(resp: any) {
 
-
+  function handleCredentialResponseGoogle(resp: any) {
 
       // Google ID token (JWT). Is sent to the backend
     fetch("/api/v1/auth/google", {
@@ -38,12 +35,55 @@ function Login() {
       .catch(console.error);
   }
 
+  
+  async function handleCredentialResponseNormal() {
+
+    try {
+      const response = await fetch("http://localhost:8080/api/v1/auth/authenticate", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const contentType = response.headers.get("content-type") || "";
+      const payload = contentType.includes("application/json")
+        ? await response.json().catch(() => null)
+        : await response.text().catch(() => "");
+      if (!response.ok) {
+        console.error("[login] non-OK:", response.status, payload);
+        alert(`Login failed (${response.status}). ${typeof payload === "string" ? payload : payload?.message ?? ""}`);
+        return;
+      }
+
+      const data: any = payload || {};
+      console.log("[login] success:", data);
+
+      localStorage.setItem("token", data.token);
+      localStorage.setItem(
+        "user",
+        JSON.stringify({ firstname: data.firstname, lastname: data.lastname, email: data.email })
+      );
+
+      console.log("[login] navigating to /profile");
+      navigate("/profile");
+    } catch (err) {
+      console.error("[login] error:", err);
+      alert("Network or CORS error—see console for details.");
+    }
+  }
+
+
+    
+
   useEffect(() => {
     if (!window.google) return;
 
     window.google.accounts.id.initialize({
       client_id: "981498023327-rdctb2uffv53bvkk6bpoeiqlqjbkjorf.apps.googleusercontent.com",
-      callback: handleCredentialResponse,
+      callback: handleCredentialResponseGoogle,
     });
 
     const el = document.getElementById("googleSignInDiv");
@@ -56,6 +96,7 @@ function Login() {
       });
     }
   }, []);
+
 
 
   return (
@@ -84,7 +125,7 @@ function Login() {
           onChange={(e) => setPassword(e.target.value)}
         />
 
-        <button className="log-in-btn" disabled={isDisabled}>Sign In</button>
+        <button className="log-in-btn" disabled={isDisabled} onClick = {handleCredentialResponseNormal}>Sign In</button>
         <div className="other-stuff">OR</div>
 
         <div id="googleSignInDiv" />
@@ -92,7 +133,7 @@ function Login() {
 
       <div className="create-account">
         <div className="new-to-community">New to our community</div>
-        <button className="create-account-btn" onClick={() => navigate("/Signup")}>Create an account</button>
+        <button className="create-account-btn1" onClick={() => navigate("/Signup")}>Create an account</button>
       </div>
     </div>
   );

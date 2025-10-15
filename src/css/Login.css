@@ -45,24 +45,9 @@
 }
 
 
-.create-account-btn{
-  width: 83%;
-  padding: 12px;
-  border-radius: 25px;
-  color: #36454f;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  user-select: none;
-  border: 2px solid #cfdcff;
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.log-in-btn:hover,
-.create-account-btn:hover {
+
+.log-in-btn:hover{
   background-color: #dadaff;
 }
 
@@ -125,4 +110,25 @@
   cursor: pointer;
   background: url("../exit.svg") no-repeat center;
   background-size: contain; 
+}
+
+
+
+.create-account-btn1{
+  width: 83%;
+  padding: 12px;
+  border-radius: 25px;
+  color: #36454f;
+  font-size: 16px;
+  cursor: pointer;
+  user-select: none;
+  border: 3px solid #cfdcff;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-account-btn1:hover {
+    background-color: #f0f8ff; 
 }

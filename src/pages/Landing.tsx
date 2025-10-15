@@ -1,8 +1,12 @@
 import Navbar from "../components/Navbar";
 import WhatWeDo from "../components/WhatWeDo";
+import { useNavigate } from "react-router-dom";
 import '../css/Landing.css'
 
 function Landing() {
+
+    const navigate = useNavigate();
+
     return (
     <div className = "landing">
       <Navbar />
@@ -17,7 +21,7 @@ function Landing() {
             achieve the best results and don't waist time. 
         </p>
         <div className="try-button-row">
-          <button className="try-for-free">Try for free</button>
+          <button className="try-for-free" onClick={()=> navigate("/Signup")}>Try for free</button>
         </div>
 
         <div className="scroll-page" id="progress">1</div>
