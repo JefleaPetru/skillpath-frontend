@@ -39,7 +39,7 @@ function Signup() {
     setSuccessMsg("");
     setLoading(true);
 
-    const normalizedEmail = email.trim().toLowerCase();
+    const normalizedEmail = email.trim();
 
     try {
       const response = await fetch("http://localhost:8080/api/v1/auth/register", {
@@ -56,7 +56,15 @@ function Signup() {
       if (response.status === 201) {
         // success: show message and go to verification page
         setSuccessMsg("Verification code sent. Check your email.");
-        navigate("/verify", { state: { email: normalizedEmail } });
+        const verifyData = {
+          firstname: firstName,
+          lastname: lastName,
+          email: normalizedEmail,
+          password: testPassword,
+        };
+        localStorage.setItem("verifyData", JSON.stringify(verifyData));
+
+        navigate("/verify");
         return;
       }
 
